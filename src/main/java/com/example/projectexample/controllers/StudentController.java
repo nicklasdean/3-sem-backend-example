@@ -33,7 +33,6 @@ public class StudentController {
     public ResponseEntity<Student> createStudent(@RequestBody Student student){
         System.out.println(student.isActive());
         Student savedStudent = studentRepository.save(student);
-
         return new ResponseEntity<>(savedStudent, HttpStatus.CREATED);
     }
 }

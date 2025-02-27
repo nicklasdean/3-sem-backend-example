@@ -11,17 +11,16 @@ public class Student {
     private int id;
     private String name;
     private int age;
-    @JsonProperty("isActive")
-    private boolean isActive;
+    private boolean active;
 
     public Student() {
 
     }
 
-    public Student(String name, int age, boolean isActive) {
+    public Student(String name, int age, boolean active) {
         this.name = name;
         this.age = age;
-        this.isActive = isActive;
+        this.active = active;
     }
 
     public String getName() {
@@ -41,10 +40,11 @@ public class Student {
     }
 
     public boolean isActive() {
-        return isActive;
+        return active;
     }
 
+
     public void setActive(boolean active) {
-        isActive = active;
+        this.active = active;
     }
 }
